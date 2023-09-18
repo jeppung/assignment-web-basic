@@ -1760,6 +1760,10 @@ video {
     height: 24rem;
   }
 
+  .md\:h-32{
+    height: 8rem;
+  }
+
   .md\:flex-row{
     flex-direction: row;
   }
