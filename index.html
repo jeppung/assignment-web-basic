@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/tailwind-output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"  rel="stylesheet" />
     <title>Sea Labs Indonesia</title>
 </head>
 <body>
     <header class="flex justify-center">
-        <div class="flex w-full max-w-5xl flex-col justify-between p-5 md:flex-row">
+        <div class="flex w-full max-w-5xl flex-col justify-between p-5 md:flex-row lg:px-0">
             <div class="flex justify-between items-center">
                 <img src="./assets/img/logo.png" alt="">
                 <svg id="hamburger-menu" class="w-5 h-5 md:hidden" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -29,22 +30,57 @@
         </div>
     </header>
     <main class="flex justify-center items-center flex-col">
-        <section class="relative bg-cyan-700 w-full">
-            <div class="absolute flex justify-between items-center w-full h-full">
-                <img src="./assets/img/bg_direction_nav_left.png" alt="">
-                <img src="./assets/img/bg_direction_nav_right.png" alt="">
-            </div>
-            <div class="absolute bottom-2 w-full">
-                <div class="flex gap-x-2 justify-center">
-                    <div class="w-6 h-2 rounded-lg bg-white"></div>
-                    <div class="w-6 h-2 rounded-lg bg-black opacity-60"></div>
-                    <div class="w-6 h-2 rounded-lg bg-black opacity-60"></div>
+        <section id="default-carousel" class="relative w-full h-fit" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative overflow-hidden h-36 md:h-96">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./assets/img/slides/1.jpg" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    <div class="hidden absolute w-full text-center md:flex justify-center bottom-6" style="background-color: rgba(255, 255, 255, 0.2);">
+                        <div class=" w-fit flex flex-col gap-y-2 p-4" style="background-color: rgba(255, 255, 255, 0.5);">
+                            <h1 class="text-4xl font-bold">Collage Education</h1>
+                            <p class="font-bold">Awesome Template get it know</p>
+                            <button class="bg-blue-500 py-2 px-5 text-white w-fit self-center">See Pricing</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./assets/img/slides/2.jpg" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    <div class="hidden absolute w-full text-center md:flex justify-center bottom-6" style="background-color: rgba(255, 255, 255, 0.2);">
+                        <div class=" w-fit flex flex-col gap-y-2 p-4" style="background-color: rgba(255, 255, 255, 0.5);">
+                            <h1 class="text-4xl font-bold">Collage Education</h1>
+                            <p class="font-bold">Awesome Template get it know</p>
+                            <button class="bg-blue-500 py-2 px-5 text-white w-fit self-center">See Pricing</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./assets/img/slides/3.jpg" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    <div class="hidden absolute w-full text-center md:flex justify-center bottom-6" style="background-color: rgba(255, 255, 255, 0.2);">
+                        <div class=" w-fit flex flex-col gap-y-2 p-4" style="background-color: rgba(255, 255, 255, 0.5);">
+                            <h1 class="text-4xl font-bold">Collage Education</h1>
+                            <p class="font-bold">Awesome Template get it know</p>
+                            <button class="bg-blue-500 py-2 px-5 text-white w-fit self-center">See Pricing</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div>
-                <img class="w-full object-cover" src="./assets/img/slides/1.jpg" alt="">
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-2 left-1/2">
+                <button type="button" class="w-5 h-2 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button" class="w-5 h-2 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                <button type="button" class="w-5 h-2 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
             </div>
-        </section> 
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full cursor-pointer" data-carousel-prev>
+                <img src="./assets/img/bg_direction_nav_left.png" alt="">
+            </button>
+            <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full cursor-pointer" data-carousel-next>
+                <img src="./assets/img/bg_direction_nav_right.png" alt="">
+            </button>
+        </section>
         <div class="items-center bg-red-500 max-w-5xl">
             <section class="py-16 px-5 bg-white lg:px-0">
                 <div class="text-center">
@@ -188,5 +224,6 @@
        </div>
     </footer>
     <script src="./assets/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
 </body>
 </html>
