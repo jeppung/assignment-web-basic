@@ -807,6 +807,10 @@ video {
   height: 13rem;
 }
 
+.h-24{
+  height: 6rem;
+}
+
 .max-h-full{
   max-height: 100%;
 }
@@ -1715,6 +1719,20 @@ video {
 
   .group:focus .dark\:group-focus\:ring-gray-800\/70{
     --tw-ring-color: rgb(31 41 55 / 0.7);
+  }
+}
+
+@media (min-width: 640px){
+  .sm\:h-28{
+    height: 7rem;
+  }
+
+  .sm\:h-36{
+    height: 9rem;
+  }
+
+  .sm\:h-24{
+    height: 6rem;
   }
 }
 
