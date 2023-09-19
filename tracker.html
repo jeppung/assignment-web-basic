@@ -11,7 +11,7 @@
 <body class="bg-slate-100">
     <main class="w-full p-5 flex flex-col items-center gap-y-10">
         <div>
-            <a class="text-xl underline text-purple-900" href="./index.html">Home</a>
+            <a id="home" class="text-xl underline text-purple-900" href="./index.html">Home</a>
         </div>
         <div>
             <h1 class="text-xl font-bold">Expense Tracker</h1>
@@ -19,52 +19,39 @@
         <div class="px-7 pt-5 pb-12 w-full bg-white rounded-tl-xl rounded-bl-[70px] rounded-tr-[70px] rounded-br-3xl shadow-2xl">
             <div>
                 <p class="text-sm">YOUR BALANCE</p>
-                <h1 class="text-3xl">Rp 0</h1>
+                <h1 id="balance" class="text-3xl">Rp 0</h1>
             </div>
             <div class="flex mt-5 justify-center gap-x-10">
                 <div class="py-1">
                     <p class="text-sm">INCOME</p>
-                    <p class="text-md text-green-500">+Rp 0</p>
+                    <p id="income" class="text-md text-green-500">+Rp 0</p>
                 </div>
                 <div class="w-[1px] bg-black"></div>
                 <div class="py-1">
                     <p class="text-sm">EXPENSE</p>
-                    <p class="text-md text-red-500">-Rp 0</p>
+                    <p id="expense" class="text-md text-red-500">-Rp 0</p>
                 </div>
             </div>
             <div class="mt-8">
                 <div class="border-b-2 pb-2 text-lg">
                     <h1>History</h1>
                 </div>
-                <div class="py-3 flex flex-col gap-y-2">
-                    <div class="p-2 border-r-red-500 border-r-4">
-                        <div class="flex justify-between text-sm">
-                            <p>Buy gorceries</p>
-                            <p>-100.000</p>
-                        </div>
-                    </div>
-                    <div class="p-2 border-r-green-500 border-r-4">
-                        <div class="flex justify-between text-sm">
-                            <p>Allowance</p>
-                            <p>+50.000</p>
-                        </div>
-                    </div>
-                </div>
+                <div id="history-data" class="py-3 flex flex-col gap-y-2"></div>
             </div>
             <div class="mt-3">
                 <div class="border-b-2 pb-2 text-lg">
                     <h1>New transaction</h1>
                 </div>
-                <form action="#" class="mt-4 flex flex-col gap-y-3">
+                <form action="#" id="transaction-form" class="mt-4 flex flex-col gap-y-3">
                     <div class="flex flex-col gap-y-2">
                         <label for="details">Transaction Details</label>
                         <input placeholder="Enter Details..." class="h-7 text-xs" type="text" name="details" id="details">
                     </div>
                     <div class="flex flex-col gap-y-2">
                         <label for="amount">Amount (negative - expense, positive - income)</label>
-                        <input placeholder="Enter Amount..." class="h-7 text-xs" type="text" name="amount" id="amount">
+                        <input placeholder="Enter Amount..." class="h-7 text-xs" type="number" name="amount" id="amount" required>
                     </div>
-                    <button class="bg-gray-700 text-sm text-white py-1.5 rounded-lg" type="submit">Add transaction</button>
+                    <button id="add-transaction" class="bg-gray-700 text-sm text-white py-1.5 rounded-lg" type="submit">Add transaction</button>
                 </form>
             </div>
         </div>
