@@ -946,10 +946,6 @@ video {
   border-bottom-width: 1px;
 }
 
-.border-r-2{
-  border-right-width: 2px;
-}
-
 .border-r-4{
   border-right-width: 4px;
 }
@@ -1188,6 +1184,10 @@ video {
   text-align: center;
 }
 
+.font-jetbrain{
+  font-family: JetBrains Mono, monospace;
+}
+
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1237,6 +1237,18 @@ video {
 }
 
 .font-semibold{
+  font-weight: 600;
+}
+
+.font-\[700\]{
+  font-weight: 700;
+}
+
+.font-\[500\]{
+  font-weight: 500;
+}
+
+.font-\[600\]{
   font-weight: 600;
 }
 
@@ -1300,6 +1312,14 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[500\]{
+  color: 500;
+}
+
+.text-\[700\]{
+  color: 700;
 }
 
 .underline{

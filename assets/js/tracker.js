@@ -52,7 +52,7 @@ transForm.addEventListener("submit",(e) => {
 
     newBal = parseInt(localStorage.getItem("income")) + parseInt(localStorage.getItem("expense"))
     localStorage.setItem("balance", newBal)
-    balance.textContent =`Rp ${newBal}`
+    balance.textContent =`Rp${newBal}`
 
     // Creating Element
     creatingHistoryData(details.value, amountVal, colorIndicator)
