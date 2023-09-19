@@ -1500,6 +1500,10 @@ video {
   .md\:p-0{
     padding: 0px;
   }
+
+  .md\:pr-16{
+    padding-right: 4rem;
+  }
 }
 
 @media (min-width: 1024px){
@@ -1514,6 +1518,14 @@ video {
 
   .lg\:pr-0{
     padding-right: 0px;
+  }
+
+  .lg\:pr-16{
+    padding-right: 4rem;
+  }
+
+  .lg\:pr-4{
+    padding-right: 1rem;
   }
 
   .lg\:text-xl{
