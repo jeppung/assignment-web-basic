@@ -35,7 +35,6 @@ transForm.addEventListener("submit",(e) => {
     let amountVal = parseInt(amount.value)
     let colorIndicator = ""
     let newVal = 0
-    let newBal = 0
 
     if(amountVal.toString().includes("-")) {
         colorIndicator = "border-r-red-500"
@@ -50,9 +49,7 @@ transForm.addEventListener("submit",(e) => {
         amountVal = `+${amountVal}`
     }
 
-    newBal = parseInt(localStorage.getItem("income")) + parseInt(localStorage.getItem("expense"))
-    localStorage.setItem("balance", newBal)
-    balance.textContent =`Rp${newBal}`
+    calculateNewBalance()
 
     // Creating Element
     creatingHistoryData(details.value, amountVal, colorIndicator)
@@ -70,7 +67,31 @@ transForm.addEventListener("submit",(e) => {
 
 function creatingHistoryData(details, amount, colorIndicator) {
     let div1 = document.createElement("div")
-    div1.classList.add("p-2",colorIndicator,"border-r-4")
+    div1.id = `data-${transactionHistoryArr.length + 1}`
+    div1.classList.add("p-2",colorIndicator,"border-r-4", "hover:bg-red-200", "transition-colors")
+    div1.addEventListener("click", (e) => {
+        e.preventDefault()
+
+        if(!confirm("Are you sure to delete this data?")) return
+        
+        let currVal = e.currentTarget.firstChild.childNodes[1].textContent
+        if(currVal.toString().includes("-")) {
+            let newVal = parseInt(localStorage.getItem("expense")) - currVal
+            localStorage.setItem("expense", newVal)
+            expense.textContent = `Rp${newVal}`
+        }else{
+            let newVal = parseInt(localStorage.getItem("income")) - currVal
+            localStorage.setItem("income", newVal)
+            income.textContent = `Rp${newVal}`
+        }
+
+        calculateNewBalance()
+        transactionHistory.removeChild(e.currentTarget)
+        transactionHistoryArr = transactionHistoryArr.filter((data) => {
+            return data.details != e.currentTarget.firstChild.childNodes[0].textContent
+        })
+        localStorage.setItem("transaction-history", JSON.stringify(transactionHistoryArr))
+    })
 
     let div2 = document.createElement("div")
     div2.classList.add("flex","justify-between","text-sm")
@@ -86,4 +107,10 @@ function creatingHistoryData(details, amount, colorIndicator) {
     div1.appendChild(div2)
     
     transactionHistory.appendChild(div1)
+}
+
+function calculateNewBalance() {
+    let newBal = parseInt(localStorage.getItem("income")) + parseInt(localStorage.getItem("expense"))
+    localStorage.setItem("balance", newBal)
+    balance.textContent =`Rp${newBal}`
 }
