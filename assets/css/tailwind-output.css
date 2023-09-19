@@ -867,11 +867,6 @@ video {
   row-gap: 1.25rem;
 }
 
-.gap-x-2{
-  -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
-}
-
 .space-x-3 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(0.75rem * var(--tw-space-x-reverse));
@@ -970,11 +965,6 @@ video {
   border-color: rgb(100 116 139 / var(--tw-border-opacity));
 }
 
-.border-r-red-500{
-  --tw-border-opacity: 1;
-  border-right-color: rgb(239 68 68 / var(--tw-border-opacity));
-}
-
 .border-r-green-500{
   --tw-border-opacity: 1;
   border-right-color: rgb(34 197 94 / var(--tw-border-opacity));
@@ -1054,14 +1044,13 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-red-200{
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
-}
-
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.p-2{
+  padding: 0.5rem;
 }
 
 .p-4{
@@ -1074,10 +1063,6 @@ video {
 
 .p-8{
   padding: 2rem;
-}
-
-.p-2{
-  padding: 0.5rem;
 }
 
 .px-10{
@@ -1150,11 +1135,6 @@ video {
   padding-bottom: 2rem;
 }
 
-.px-2{
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
 .pb-0{
   padding-bottom: 0px;
 }
@@ -1207,6 +1187,18 @@ video {
   font-family: JetBrains Mono, monospace;
 }
 
+.font-mono{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.font-notoserif{
+  font-family: Noto Serif, serif;
+}
+
+.font-opensans{
+  font-family: Open Sans, sans;
+}
+
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1247,6 +1239,10 @@ video {
   line-height: 1rem;
 }
 
+.font-\[600\]{
+  font-weight: 600;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -1256,18 +1252,6 @@ video {
 }
 
 .font-semibold{
-  font-weight: 600;
-}
-
-.font-\[700\]{
-  font-weight: 700;
-}
-
-.font-\[500\]{
-  font-weight: 500;
-}
-
-.font-\[600\]{
   font-weight: 600;
 }
 
@@ -1331,14 +1315,6 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[500\]{
-  color: 500;
-}
-
-.text-\[700\]{
-  color: 700;
 }
 
 .underline{
